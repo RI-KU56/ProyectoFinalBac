@@ -1,0 +1,54 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>App de Productos</title>
+
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/materia/bootstrap.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <div class="card-body">
+          <form action="http://localhost:8081/chat" method="get">  
+              <button class="btn btn-primary btn-block" type="submit">
+                Volver al chat
+              </button>
+            </div>
+          </form>
+  <div class="col-md-4 mx-auto">
+    <div class="card text-center">
+      <div class="card-header">
+        <h3>Lista de Mensajes</h3>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-dark">
+            <tr style="color: yellow;">
+            </tr>
+            {{#if text}}
+              {{#each text}}
+                <tr>
+                  <td>Mensaje {{@index}}</td>
+                  <td>{{this.texto}}</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              {{/each}}
+            {{else}}
+              <h2>No hay mensajes</h2>
+            {{/if}}
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
